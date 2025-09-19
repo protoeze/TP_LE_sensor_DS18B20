@@ -1,21 +1,24 @@
 #include <Arduino.h>
 #include <OneWire.h>
-#include "DallasTemperature.h"
-
-
-// put function declarations here:
-int myFunction(int, int);
+#include <DallasTemperature.h>
+ 
+OneWire ourWire(9);                //Se establece el pin 2  como bus OneWire
+ 
+DallasTemperature sensors(&ourWire); //Se declara una variable u objeto para nuestro sensor
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+delay(1000);
+Serial.begin(9600);
+sensors.begin();   //Se inicia el sensor
 }
+ 
+void loop()
+ {
+sensors.requestTemperatures();   //Se envía el comando para leer la temperatura
+float temp= sensors.getTempCByIndex(0); //Se obtiene la temperatura en ºC
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+Serial.print("Temperatura= ");
+Serial.print(temp);
+Serial.println(" C");
+delay(100);                     
 }
