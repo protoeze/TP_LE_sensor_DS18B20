@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1759502257 source:c:\grafico_ds18b20\main.cpp
+	<windows.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	"fserie.h"
+	"utiles.h"
+	<stdint.h>
+
+976681372 c:\glut\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1651550074 c:\grafico_ds18b20\fserie.h
+	<sys/ioctl.h>
+	<asm/ioctls.h>
+	<termios.h>
+	<fcntl.h>
+	<unistd.h>
+	<string.h>
+	<stdlib.h>
+	<windows.h>
+	<assert.h>
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1697861392 c:\grafico_ds18b20\utiles.h
+	<stdbool.h>
+	<sys/ioctl.h>
+	<asm/ioctls.h>
+	<termios.h>
+	<fcntl.h>
+	<unistd.h>
+	<signal.h>
+	<assert.h>
+	"termios.h"
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
